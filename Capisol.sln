@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capisol.Shared", "src\shared\Capisol.Shared\Capisol.Shared.csproj", "{A95E0184-182B-4D9D-AE16-34105C41C5DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0959BD92-40B7-448D-865F-0F29EFF6BD16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{B1FC8416-BB85-48D7-890F-093C93C0AA0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{9722318A-AA60-44E3-812A-99D0D0EF107E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{804F3A35-6BBE-4083-8A0C-D5DE70F15638}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capisol.Mailer", "src\tools\Capisol.Mailer\Capisol.Mailer.csproj", "{D625D005-6BB1-40E5-9FEF-5FE7D93836F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capisol.Interview.Assessment", "src\apps\Capisol.Interview.Assessment\Capisol.Interview.Assessment.csproj", "{2DFEA01C-8D1A-4237-AFA9-80373DB2385D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A95E0184-182B-4D9D-AE16-34105C41C5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95E0184-182B-4D9D-AE16-34105C41C5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95E0184-182B-4D9D-AE16-34105C41C5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95E0184-182B-4D9D-AE16-34105C41C5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D625D005-6BB1-40E5-9FEF-5FE7D93836F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D625D005-6BB1-40E5-9FEF-5FE7D93836F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D625D005-6BB1-40E5-9FEF-5FE7D93836F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D625D005-6BB1-40E5-9FEF-5FE7D93836F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DFEA01C-8D1A-4237-AFA9-80373DB2385D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DFEA01C-8D1A-4237-AFA9-80373DB2385D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DFEA01C-8D1A-4237-AFA9-80373DB2385D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DFEA01C-8D1A-4237-AFA9-80373DB2385D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A95E0184-182B-4D9D-AE16-34105C41C5DB} = {9722318A-AA60-44E3-812A-99D0D0EF107E}
+		{B1FC8416-BB85-48D7-890F-093C93C0AA0C} = {0959BD92-40B7-448D-865F-0F29EFF6BD16}
+		{9722318A-AA60-44E3-812A-99D0D0EF107E} = {0959BD92-40B7-448D-865F-0F29EFF6BD16}
+		{804F3A35-6BBE-4083-8A0C-D5DE70F15638} = {0959BD92-40B7-448D-865F-0F29EFF6BD16}
+		{D625D005-6BB1-40E5-9FEF-5FE7D93836F9} = {804F3A35-6BBE-4083-8A0C-D5DE70F15638}
+		{2DFEA01C-8D1A-4237-AFA9-80373DB2385D} = {B1FC8416-BB85-48D7-890F-093C93C0AA0C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD688ED8-E6F1-4087-B51B-9D048A4D6C07}
+	EndGlobalSection
+EndGlobal

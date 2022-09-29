@@ -1,0 +1,19 @@
+<h1 id="tableLabel">Companies</h1>
+
+<p *ngIf="!companies?.length"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="companies.length">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Registration Date</th>
+   
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let company of companies">
+      <td>{{ company.name }}</td>
+      <td>{{ company.registrationDate | date:'yyyy-MM-dd' }}</td>    
+    </tr>
+  </tbody>
+</table>
