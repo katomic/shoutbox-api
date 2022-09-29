@@ -1,6 +1,7 @@
 ﻿using Capisol.Interview.Assessment.Context.Entities.Contacts;
 using Capisol.Interview.Assessment.Context.Entities.Companies;
 using Microsoft.EntityFrameworkCore;
+using Capisol.Interview.Assessment.Context.Entities.Shouts;
 
 namespace Capisol.Interview.Assessment.Context;
 
@@ -15,6 +16,9 @@ public class DataContext : DbContext
 
     public DbSet<Company>? CompanySet { get; set; }
 
+    public DbSet<Shout>? ShoutSet { get; set; }
+
+
     public static void Migrate(IServiceScope scope)
     {
         using var context = scope.ServiceProvider.GetRequiredService<DataContext>();
@@ -26,6 +30,7 @@ public class DataContext : DbContext
         {
             Contact.Seed(context);
             Company.Seed(context);
+            Shout.Seed(context);
         }
     }
 }
