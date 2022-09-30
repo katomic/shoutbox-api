@@ -12,8 +12,12 @@ builder.Services.AddControllersWithViews()
         options.JsonSerializerOptions.Converters.Add(new DateOnlyJsonConverter());
     });
 
+//builder.Services.AddDbContext<DataContext>
+//    (o => o.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection_SQLITE")));
+
 builder.Services.AddDbContext<DataContext>
-    (o => o.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    (o => o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection_MSSQL")));
+
 
 var app = builder.Build();
 
