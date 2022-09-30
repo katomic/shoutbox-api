@@ -30,17 +30,35 @@ public class ShoutController : APIBaseController
     public ShoutModel PostShoutModel(ShoutModel shout)
     {
 
-         var newShout = DataContext.ShoutSet.Add(new Context.Entities.Shouts.Shout
-         {
-             CreateDate=DateTime.Now,
-             Username = shout.Username,
-             Message = shout.Message
-         });
+        var newShout = DataContext.ShoutSet.Add(new Context.Entities.Shouts.Shout
+        {
+            CreateDate = DateTime.Now,
+            Username = shout.Username,
+            Message = shout.Message,
+            IsDeleted = false,
+        });
 
         DataContext.SaveChanges();
 
 
-        return  shout;
+        return shout;
+    }
+
+
+    [HttpPut]
+    public bool PutShoutModel(ShoutModel shout)
+    {
+        var toUpdate = DataContext.ShoutSet?.FirstOrDefault(s => s.Id == shout.Id);
+
+        if (toUpdate != null)
+        {
+            toUpdate.IsDeleted = true;
+            DataContext.ShoutSet.Update(toUpdate);
+            DataContext.SaveChanges();
+        };
+
+
+        return true;
     }
 
     //[HttpPost]

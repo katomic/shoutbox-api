@@ -20,6 +20,10 @@ public class Shout
     [Required]
     public DateTime CreateDate { get; set; } = DateTime.Now;
 
+
+    [Required]
+    public bool IsDeleted { get; set; } = false;
+
     internal static void Seed(DataContext context)
     {
         if (context.ShoutSet?.SingleOrDefault(a => a.Username == "john") == null)
@@ -28,6 +32,7 @@ public class Shout
                 Username = "John",
                 Message = "drives Miss daisy",
                 CreateDate = DateTime.Now,
+                IsDeleted = false,
             });
 
         if (context.ShoutSet?.SingleOrDefault(a => a.Username == "andrew") == null)
@@ -36,6 +41,7 @@ public class Shout
                 Username = "Andrew",
                 Message = "walks the dog",
                 CreateDate = DateTime.Now,
+                IsDeleted = false,  
             });
 
         context.SaveChanges();

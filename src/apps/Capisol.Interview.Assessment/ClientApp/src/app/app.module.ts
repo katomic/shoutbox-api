@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ContactsComponent } from './pages/contacts/contact.component';
 import { CompaniesComponent } from './pages/companies/company.component';
+/*import { ShoutsComponent } from './pages/shouts/shout.component';*/
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CompaniesComponent } from './pages/companies/company.component';
     FetchDataComponent,
     ContactsComponent,
     CompaniesComponent,
+ /*   ShoutsComponent,*/
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -32,6 +34,7 @@ import { CompaniesComponent } from './pages/companies/company.component';
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'contacts', component: ContactsComponent },
       { path: 'companies', component: CompaniesComponent },
+      /*{ path: 'shouts', component: ShoutsComponent },*/
     ])
   ],
   providers: [],
